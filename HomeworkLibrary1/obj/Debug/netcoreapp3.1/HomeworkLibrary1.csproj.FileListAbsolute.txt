@@ -1,0 +1,9 @@
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\obj\Debug\netcoreapp3.1\HomeworkLibrary1.csprojAssemblyReference.cache
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\obj\Debug\netcoreapp3.1\HomeworkLibrary1.AssemblyInfoInputs.cache
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\obj\Debug\netcoreapp3.1\HomeworkLibrary1.AssemblyInfo.cs
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\obj\Debug\netcoreapp3.1\HomeworkLibrary1.csproj.CoreCompileInputs.cache
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\bin\Debug\netcoreapp3.1\HomeworkLibrary1.deps.json
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\bin\Debug\netcoreapp3.1\HomeworkLibrary1.dll
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\bin\Debug\netcoreapp3.1\HomeworkLibrary1.pdb
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\obj\Debug\netcoreapp3.1\HomeworkLibrary1.dll
+C:\Users\georrom\OneDrive\CSharp\SolutionHomework\HomeworkLibrary1\obj\Debug\netcoreapp3.1\HomeworkLibrary1.pdb
