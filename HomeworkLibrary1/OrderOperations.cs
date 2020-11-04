@@ -6,7 +6,7 @@ namespace Homework
     {
         public static int[,] ReverseTheArrayRelativeToItsMainDiagonal(int[,] test)
         {
-            int[,] test2 = new int[test.GetLength(0), test.GetLength(1)];
+            int[,] test2 = new int[test.GetLength(1), test.GetLength(0)];
             for (int i = 0; i < test.GetLength(0); i++)
             {
                 for (int j = 0; j < test.GetLength(1); j++)

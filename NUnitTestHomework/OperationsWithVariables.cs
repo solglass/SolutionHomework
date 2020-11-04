@@ -58,5 +58,35 @@ namespace NUnitTestHomework
             Assert.AreEqual(expected[1], actual[1], 0.01);
         }
 
+        [TestCase(0,0)]
+        [TestCase(1, 0)]
+        public void OperationsWithVariablesNegativeCalculateDivAndMod(int a, int b)
+        {
+            try
+            {
+                Homework.OperationsWithVariables.CalculateDivAndMod(a, b);
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
+        }
+        [TestCase(0, 0)]
+        [TestCase(2, 2)]
+        public void OperationsWithVariablesNegativeSolve5AplBSqDivByBMinusA(int a, int b)
+        {
+            try
+            {
+                Homework.OperationsWithVariables.Solve5AplBSqDivByBMinusA(a, b);
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
+        }
+
+
     }
 }

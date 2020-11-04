@@ -7,7 +7,8 @@ namespace Homework
         public static double Solve5AplBSqDivByBMinusA(int a, int b)
         {
             double c = 0;
-            c = (5 * a + b * b / (b - a));
+            if (b - a == 0) { throw new Exception("Division by 0 error"); }
+             else { c = (5 * a + b * b / (b - a)); }
             return c;
         }
 
@@ -25,8 +26,13 @@ namespace Homework
         public static int[] CalculateDivAndMod(int a, int b)
         {
             int[] result = new int[2];
-            result[0] = a / b;
-            result[1] = a % b;
+            if (b == 0)
+            { throw new Exception("Division by 0 error"); }
+            else
+            {
+                result[0] = a / b;
+                result[1] = a % b;
+            }
             return result;
         }
             public static double SolveLinearEquation(double a, double b, double c)

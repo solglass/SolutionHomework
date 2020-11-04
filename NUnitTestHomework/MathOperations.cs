@@ -1,4 +1,6 @@
 using NUnit.Framework;
+using System;
+using Homework;
 
 namespace NUnitTestHomework
 {
@@ -255,6 +257,167 @@ namespace NUnitTestHomework
             Assert.AreEqual(expected, actual);
         }
 
+
+        //2d array tests
+        [TestCase(1, 1)]
+        [TestCase(2, 1)]
+        [TestCase(3, 1)]
+        [TestCase(4, 1)]
+
+        public void h5t1q1(int arrayMockNumber, int expected)
+        {
+
+            int[,] a = GetArrayMock(arrayMockNumber);
+            int actual = MathOperations.FindMinElementOfTheArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(1, 6)]
+        [TestCase(2, 8)]
+        [TestCase(3, 9)]
+        [TestCase(4, 1)]
+
+        public void h5t2q1(int arrayMockNumber, int expected)
+        {
+            int[,] a = GetArrayMock(arrayMockNumber);
+            int actual = MathOperations.FindMaxElementOfTheArray(a); ;
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(1, 1)]
+        [TestCase(2, 2)]
+        [TestCase(3, 3)]
+        [TestCase(4, 4)]
+
+        public void h5t3q1(int arrayMockNumber, int expectedMockNumber)
+        {
+            int[] expected = GetExpectedMockMinIndex(expectedMockNumber);
+            int[,] a = GetArrayMock(arrayMockNumber);
+            int[] actual = MathOperations.FindIndexOfMinElementOfTheArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(1, 1)]
+        [TestCase(2, 2)]
+        [TestCase(3, 3)]
+        [TestCase(4, 4)]
+
+        public void h5t4q1(int arrayMockNumber, int expectedMockNumber)
+        {
+            int[] expected = GetExpectedMockMaxIndex(expectedMockNumber);
+            int[,] a = GetArrayMock(arrayMockNumber);
+            int[] actual = MathOperations.FindIndexOfMaxElementOfTheArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(1, 1)]
+        [TestCase(2, 1)]
+        [TestCase(3, 1)]
+        [TestCase(4, 0)]
+
+        public void h5t5q1(int arrayMockNumber, int expected)
+        {
+
+            int[,] a = GetArrayMock(arrayMockNumber);
+            int actual = MathOperations.FindNumberOfElementsLargerThanAllNeighboursOfTheArray(a);
+            Assert.AreEqual(expected, actual);
+        }
+        [TestCase(5,-1,2)]
+        [TestCase(0, 0, 0)]
+        [TestCase(1,-5,10)]
+        public void MathTestSolveQudraticEquationNegative(double a, double b, double c)
+        {
+            try
+            {
+                Homework.MathOperations.SolveQudraticEquation(a, b, c);
+            }
+            catch
+            {
+                Assert.Pass();
+            }
+            Assert.Fail();
+        }
+
+        public int[] GetExpectedMockMaxIndex(int n)
+        {
+            switch (n)
+            {
+                case 1:
+                    return new int[]
+                    {2,1};
+                case 2:
+                    return new int[]
+                    {3,1 };
+                case 3:
+                    return new int[]
+                    {2,2 };
+                case 4:
+                    return new int[]
+                    {0,0};
+                default:
+                    throw new Exception();
+            }
+        }
+
+        public int[] GetExpectedMockMinIndex(int n)
+        {
+            switch (n)
+            {
+                case 1:
+                    return new int[]
+                    {0,0};
+                case 2:
+                    return new int[]
+                    {0,0};
+                case 3:
+                    return new int[]
+                    {0,0};
+                case 4:
+                    return new int[]
+                    {0,0};
+                default:
+                    throw new Exception();
+            }
+        }
+
+
+        public int[,] GetArrayMock(int n)
+        {
+            switch (n)
+            {
+                case 1:
+                    return new int[,]
+                    {
+                                {1, 4 },
+                                {2, 5 },
+                                {3, 6 }
+                    };
+                case 2:
+                    return new int[,]
+                    {
+                                {1, 5 },
+                                {2, 6 },
+                                {3, 7 },
+                                {4, 8 }
+                    };
+                case 3:
+                    return new int[,]
+                    {
+                                {1, 4, 7},
+                                {2, 5, 8},
+                                {3, 6, 9}
+                    };
+                case 4:
+                    return new int[,]
+                    {
+                                {1 },
+                                {1 },
+                                {1 },
+                                {1 }
+                    };
+
+                default:
+                    throw new Exception();
+            }
+        }
 
 
     }
